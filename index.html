@@ -3,83 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <title>Form Registrasi Unit Kegiatan</title>
 </head>
 <style>
-    body {
-        background-color: skyblue;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+    
+    main {
+        margin: 0 auto;
+        max-width: 648px;
+        padding: 32px 0;
     }
 
-    #phone-code {
-        width: 40px;
+    label {
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
     }
 
-    #phone-number {
-        width: 120px;
+    table {
+        width: 100%;
+    }
+
+    table tr td {
+        padding: 10px;
+    }
+
+    input[type="text"], 
+    input[type="tel"],
+    input[type="email"] {
+        width: 100%;
+        height: 40px;
+        border-radius: 7px;
+        border: 1px solid black;
+        background: none;
+        padding-inline: 10px;
+    }
+
+    select {
+        width: 30%;
+        height: 40px;
+        border-radius: 5px;
+        padding-inline: 10px;
+    }
+
+    .header {
+        background-color: #f1f1f1;
+        height: 150px;
+        border-radius: 16px;
+    }
+
+    form {
+        margin-top: 32px;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+        border-radius: 7px;
+        border: 1px solid black;
+        background: none;
+        padding: 1rem 10px;
+    }
+
+    button {
+         background: rgb(89, 0, 255);
+         border: none;
+         padding: 12px 32px;
+         border-radius: 7px;
+         color: white;
+    }
+
+    header {
+        background-size: cover;
+        background-position: center;
+        border-radius: 16px;
+        background-image: url(/img/jinhsi.jpg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    div {
+        text-align: center;
+        background-color: blueviolet;
+        padding: 12px;
     }
 </style>
 <body>
     <main>
-        <form action="">
+        <header class="header">
             <div>
-                <label>Firstname: </label>
-                <input type="text">
+                <h1>FORM REGISTRASI UKM IFLS</h1>
             </div>
+        </header>
+        <form method="">
+            <label for="nama">Nama *</label><br>
+            <input type="text" name="nama" id="nama" placeholder="Ex: Zidane Ser">
+            <br><br>
+            <label for="nrp">NRP *</label><br>
+            <input type="text" name="NRP" id="nrp" placeholder="50xxxxxxxx">
+            <br><br>
+            <label for="email">Email *</label><br>
+            <input type="email" name="email" id="email" placeholder="Ex: example@gmail.com">
+            <br><br>
+            <h3>Gender</h3><br>
+            <input id="male" name="gender" type="radio" value="laki-laki"> Laki-laki <br>
+            <input id="perempuan" name="gender" type="radio" value="perempuan"> Perempuan <br>
             <br>
-            <div>
-                <label>Middlename: </label>
-                <input type="text">
-            </div>
-            <br>
-            <div>
-                <label>Lastname: </label>
-                <input type="text">
-            </div>
-            <br>
-            <div>
-                <label>Course: </label>
-                <select name="" id="">
-                    <option value="Course">Course</option>
-                    <option value="Bootcamp">Bootcamp</option>
-                    <option value="Seminar">Seminar</option>
-                </select>
-            </div>
-            <br>
-            <div>
-                <p>Gender: </p>
-                <input name="select_gender" id="male" type="radio" value="Male">
-                <label name="select_gender" for="male">Male</label><br> 
-                <input name="select_gender" id="female" type="radio" value="Female">
-                <label name="select_gender" for="female">Female</label><br> 
-            </div>
-            <br>
-            <div>
-                <label>Phones: </label>
-                <input type="number" id="phone-code" placeholder="+62">
-                <input type="tel" id="phone-number">
-            </div>
-            <br>
-            <div>
-                <p>Address</p>
-                <textarea rows="10" cols="90"></textarea>
-            </div>
-            <br>
-            <div>
-                <label for="email">Email: </label>
-                <input type="email" id="email">
-            </div>
-            <br>
-            <div>
-                <label for="password">Password: </label>
-                <input type="password" id="password">
-            </div>
-            <br>
-            <div>
-                <label for="password">Re-type password: </label>
-                <input type="password" id="password">
-            </div>
-            <br>
-            <input type="submit" value="Submit">
+            <label for="telp">No. Telp *</label><br>
+            <input id="telp" name="telp" type="tel" placeholder="+62XXXXXXX">
+            <br><br>
+            <label for="alasan">Alasan mengikuti UKM *</label><br>
+            <textarea name="alasan" id="alasan"></textarea>
+            <br><br>
+            <h3>Pilih Divisi *</h3><br>
+            <select name="divisi" id="divisi">
+                <option value="IJCA">IJCA</option>
+                <option value="DC">DC</option>
+                <option value="DEBATE">DEBATE</option>
+                <option value="BAND">BAND</option>
+            </select>
+            <br><br>
+            <button type="submit">Submit</button>
         </form>
     </main>
 </body>
