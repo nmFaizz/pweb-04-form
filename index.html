@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi Unit Kegiatan</title>
+</head>
+<style>
+    body {
+        background-color: skyblue;
+    }
+
+    #phone-code {
+        width: 40px;
+    }
+
+    #phone-number {
+        width: 120px;
+    }
+</style>
+<body>
+    <main>
+        <form action="">
+            <div>
+                <label>Firstname: </label>
+                <input type="text">
+            </div>
+            <br>
+            <div>
+                <label>Middlename: </label>
+                <input type="text">
+            </div>
+            <br>
+            <div>
+                <label>Lastname: </label>
+                <input type="text">
+            </div>
+            <br>
+            <div>
+                <label>Course: </label>
+                <select name="" id="">
+                    <option value="Course">Course</option>
+                    <option value="Bootcamp">Bootcamp</option>
+                    <option value="Seminar">Seminar</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <p>Gender: </p>
+                <input name="select_gender" id="male" type="radio" value="Male">
+                <label name="select_gender" for="male">Male</label><br> 
+                <input name="select_gender" id="female" type="radio" value="Female">
+                <label name="select_gender" for="female">Female</label><br> 
+            </div>
+            <br>
+            <div>
+                <label>Phones: </label>
+                <input type="number" id="phone-code" placeholder="+62">
+                <input type="tel" id="phone-number">
+            </div>
+            <br>
+            <div>
+                <p>Address</p>
+                <textarea rows="10" cols="90"></textarea>
+            </div>
+            <br>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email">
+            </div>
+            <br>
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" id="password">
+            </div>
+            <br>
+            <div>
+                <label for="password">Re-type password: </label>
+                <input type="password" id="password">
+            </div>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+</body>
+</html>
